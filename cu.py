@@ -74,7 +74,7 @@ buy4= tkinter.Entry(width=5)
 buy5= tkinter.Entry(width=5)
 buy6= tkinter.Entry(width=5)
 
-
+#배치 
 buy1.place(x=102,y=130)
 buy2.place(x=197,y=130)
 buy3.place(x=295,y=130)
