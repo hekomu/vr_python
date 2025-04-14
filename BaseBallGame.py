@@ -21,9 +21,19 @@ def click_btnCheck():
     successGame = False                         #성공 여부 확인 변수
     #-------------------과제 영역 시작-----------------------#
     #정답인 경우 successGame를 참으로 지정
-
+    user_input = entryLec1.get() + entryLec2.get() + entryLec3.get()
     strike = 0
     ball = 0
+
+    for i in range(3):
+        if user_input[i] == answer[i]:
+            strike += 1
+        elif user_input[i] in answer:
+            ball += 1
+
+    if strike == 3:
+        successGame = True
+
     output_str = str(strike)+"S"+" "+str(ball)+"B"
     btnCheck["text"] = (output_str)
     #------------------- 과제 영역 끝 -----------------------#
